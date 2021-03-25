@@ -4,12 +4,6 @@
 
 [Vite](https://cn.vitejs.dev/)
 
-## vite项目初始化
-
-```sh
-npm init @vitejs/app my-vue-app --template vue-ts
-```
-
 ## 模板集成
 
 - [X] vite版本
@@ -21,3 +15,21 @@ npm init @vitejs/app my-vue-app --template vue-ts
 - [X] 配置Vant3
 - [X] 移动端适配
 - [X] 请求代理
+
+## 开始
+
+安装：
+```sh
+npm install
+```
+
+启动：
+```sh
+npm run dev
+```
+
+## vite项目初始化
+
+```sh
+npm init @vitejs/app my-vue-app --template vue-ts
+```
