@@ -1,0 +1,95 @@
+.user{
+    min-height: 100%;
+    &-head{
+        color: #fff;
+        width: 375px;
+        height: 138.5px;
+        padding-top: 15px;
+        box-sizing: border-box;
+        background-image: url("./images/user-head-bg.png");
+        background-size: 375px 138.5px;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        &-avatar{
+            width: 60px;
+            height: 60px;
+            background-image: url(./images/user-avatar.png);
+            background-size: contain;
+        }
+        &>p{
+            opacity: .5;
+        }
+    }
+    &-btns{
+        display: flex;
+        background-color: #fff;
+        &-item{
+            flex:1;
+            color: #666;
+            font-size: 14px;
+            text-align: center;
+            user-select: none;
+            &:active{
+                background-color: #f9f9f9;
+            }
+            .user-icon{
+                width: 28px;
+                height: 28px;
+                margin-top: 20px;
+                display: inline-block;
+                background-size: contain;
+                $icons: d c b;
+                @each $icon in $icons{
+                    &.icon-order-#{$icon}{
+                        background-image: url(./images/btns-#{$icon}.png);
+                    }                    
+                }
+            }
+            p{
+                margin:10px 0;
+            }
+        }
+    }
+    &-list{
+        margin: 10px 0;
+        background-color: #fff; 
+        &-item{
+            color: #333;
+            padding: 12px;
+            font-size: 16px;
+            border-bottom: 1px solid #eee;
+            &:active{
+                background-color: #f9f9f9;
+            }
+            .user-item-icon{
+                width: 21px;
+                height: 21px;
+                display: inline-block;
+                background-size: contain;
+                vertical-align: top;
+                margin-right: 10px;
+                $icons: fav shop;
+                @each $icon in $icons {
+                    &.item-icon-#{$icon}{
+                        background-image: url(./images/item-#{$icon}.png);
+                    }
+                }
+            }
+            &:last-child{
+                border-bottom: none;
+            }
+            .user-item-arrow-right{
+                width: 10px;
+                height: 10px;
+                display: block;
+                float: right;
+                border-top: 1px solid #ccc;
+                border-right: 1px solid #ccc;
+                transform: rotate(45deg) translateY(5px);
+            }
+        }  
+    }
+}
